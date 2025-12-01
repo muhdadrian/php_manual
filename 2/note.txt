@@ -1,0 +1,25 @@
+PHP Tags:
+
+@ When PHP parses a file, it looks for opening and closing tags, which are <?php and ?> which tell PHP to start and stop interpreting the code between them.
+
+@ Parsing in this manner allows PHP to be embedded in all sorts of different documents, as everything outside of a pair of opening and closing tags is ignored by the PHP parser.
+
+@ PHP includes a short echo tag <?= which is a short-hand to the more verbose <?php echo.
+
+
+short_open_tag bool:
+
+Tells PHP whether the short form (<? ?>) of PHP's open tag should be allowed. If you want to use PHP in combination with XML, you can disable this option in order to use <?xml ?> inline. Otherwise, you can print it with PHP, for example: <?php echo '<?xml version="1.0"?>'; ?>. Also, if disabled, you must use the long form of the PHP open tag (<?php ?>).
+
+
+Note:
+
+This directive does not affect the shorthand <?=, which is always available.
+
+
+Note:
+
+As short tags can be disabled it is recommended to only use the normal tags (<?php ?> and <?= ?>) to maximise compatibility.
+
+
+If a file contains only PHP code, it is preferable to omit the PHP closing tag at the end of the file. This prevents accidental whitespace or new lines being added after the PHP closing tag, which may cause unwanted effects because PHP will start output buffering when there is no intention from the programmer to send any output at that point in the script.
