@@ -1,1 +1,1 @@
-Integers
+Strings
